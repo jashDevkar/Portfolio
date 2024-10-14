@@ -21,7 +21,7 @@ function Navbar() {
           <li>Contact me</li>
           <li>Projects</li>
         </ul>
-        <ul className={`md:hidden h-fit justify-around w-[40%] bg-white  text-black md:text-white ${open?"absolute right-0 mr-2 top-2":"hidden"} p-2 mt-2 rounded`}>
+        <ul className={`md:hidden h-fit justify-around w-[40%] bg-slate-900  text-white  ${open?"absolute right-0 mr-2 top-2":"hidden"} p-2 mt-2 rounded`}>
           <li className="flex w-[100%] justify-end"><IoClose size={24} onClick={toggleOpen}/></li>
           <li className="">Home</li>
           <li className="mt-2">Contact me</li>
