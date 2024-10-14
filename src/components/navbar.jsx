@@ -13,9 +13,9 @@ function Navbar() {
   }
 
   return (
-    <nav className="flex justify-around w-full h-[10vh] border-b-gray-400 border-b-2 pt-3 pb-2 items-center">
-      <h1 className="font-Pacifico text-[24px] bg-gradient-to-r  from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text">Jash</h1>
-      <div className="md:hidden "><IoMenu size={24} onClick={toggleOpen}/></div>
+    <nav className="flex md:justify-around justify-between px-8 w-full h-[10vh] border-b-gray-400 border-b-2 pt-3 pb-2 items-center">
+      <h1 className="font-Pacifico text-[32px] bg-gradient-to-r  from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text ">Jash</h1>
+      <div className="md:hidden "><IoMenu size={32} onClick={toggleOpen}/></div>
         <ul className={`hidden md:flex h-fit justify-around w-[40%] bg-white md:bg-transparent text-black md:text-white `}>
           <li>Home</li>
           <li>Contact me</li>
