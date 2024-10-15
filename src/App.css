@@ -1,0 +1,15 @@
+
+
+#particles canvas{
+    z-index: -1;
+    position: absolute;
+}
+.carousel-container {
+    max-width: 1000px;  /* Limit the maximum width */
+    margin: 0 auto;     /* Center the carousel on the page */
+    padding: 20px;      /* Add padding around the carousel */
+  }
+
+.slick-slide > div{
+    margin: 0 10px;
+}
