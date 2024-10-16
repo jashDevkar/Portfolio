@@ -1,11 +1,11 @@
-function AboutMe() {
+function AboutMe({aboutRef}) {
   return (
-    <section className="border-b-2 border-gray-500 pb-6">
+    <section className="border-b-2 border-gray-500 pb-6" ref={aboutRef}>
       <h1 className="h-[10vh] text-center text-3xl mt-4 font-Pacifico ">
         About me
       </h1>
       <div className="md:px-10 px-8">
-        <p className="text-justify bg-slate-950/90 p-6 rounded-lg">
+        <p className="text-justify bg-[#2C2C2C]/80 p-6 rounded-lg">
           I am Jash, a computer engineering student with a solid grasp of
           programming languages like React, React Native, Django, Java, C, and
           C++. I'm passionate about app development and have built projects such

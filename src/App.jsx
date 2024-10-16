@@ -13,7 +13,8 @@ import AboutMe from "./components/About";
 function App() {
 
   const skillRef = useRef(null);
-  const projectRef = useRef(null)
+  const projectRef = useRef(null);
+  const aboutRef = useRef(null);
 
   const handleScroll=()=>{
     if(skillRef.current){
@@ -26,15 +27,21 @@ function App() {
       projectRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  const handleAboutScroll=()=>{
+    if(aboutRef.current){
+      aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   
   return (
     <main className="w-full bg-transparent text-white border-b-gray-400 border-b-2 ">
       <ParticlesComponent  id='particles'/>
-        <Navbar data={[handleScroll,handleProjectScroll]}/>
+        <Navbar data={[handleScroll,handleProjectScroll,handleAboutScroll]}/>
 
-        <Title/>
+        <Title data={[handleScroll,handleProjectScroll,handleAboutScroll]}/>
 
-        <AboutMe/>
+        <AboutMe aboutRef={aboutRef}/>
 
         <Skills skillRef ={skillRef}/>
 
