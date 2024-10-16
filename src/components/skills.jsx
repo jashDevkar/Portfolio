@@ -1,6 +1,19 @@
+import { Tilt } from "react-tilt";
 
 
 const Skills=({skillRef})=> {
+
+    const defaultOptions = {
+        reverse:        true,  // reverse the tilt direction
+        max:            35,     // max tilt rotation (degrees)
+        perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+        scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
+        speed:          1000,   // Speed of the enter/exit transition
+        transition:     true,   // Set a transition on enter/exit.
+        axis:           null,   // What axis should be disabled. Can be X or Y.
+        reset:          true,    // If the tilt effect has to be reset on exit.
+        easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+    }
 
 
     const myCards=[
@@ -12,26 +25,31 @@ const Skills=({skillRef})=> {
     ]
 
   return (
+    
     <section ref={skillRef} className="border-b-2 border-gray-500 pb-7">
         <header className="h-[10vh] text-center text-4xl mt-4 font-semibold ">Skills</header>
 
-        <div className="flex flex-wrap gap-10 mb-2 justify-center items-center md:px-7">
+        <div className="flex flex-wrap md:gap-10 mb-2 justify-center items-center md:px-7 gap-7">
 
             {
                 myCards.map((item,index)=>(
-                    <div key={index} className="md:w-[230px] w-[235px] h-[260px] bg-[#2C2C2C] rounded-lg cursor-pointer hover:shadow-lg hover:shadow-[#D054A0] transition-shadow relative group shadow-sm" >
+                    <Tilt defaultOptions key={index}>
+                    <div key={index} className="md:w-[200px] w-[170px] md:h-[240px] h-[190px] bg-[#2C2C2C] rounded-lg cursor-pointer hover:shadow-lg hover:shadow-[#D054A0] transition-shadow relative group shadow-sm" >
                     
-                        <img src={item.imagePath} className="md:w-[230px] w-[235px] h-[210px] rounded-lg"/>
+                        <img src={item.imagePath} className="md:w-full w-[210px] h-[140px] md:h-[80%]  rounded-lg"/>
                         <div className="flex justify-between mt-3 items-center px-2">
-                         <h1 className="font-bold font-Roboto ">{item.title}</h1>
-                         <button className="p-1 hidden group-hover:block  rounded-lg  text-white text-[12px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 "><a href={item.url}>Learn topic</a></button>
+                         <h1 className="font-bold font-Roboto  group-hover:text-[12px]">{item.title}</h1>
+                         <button className="p-1 hidden group-hover:block rounded-lg  text-white text-[12px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 "><a href={item.url}>Learn topic</a></button>
                         </div>
                     </div>
+                    </Tilt>
+                    
                 ))
             }
 
         </div>
     </section>
+    
   )
 }
 

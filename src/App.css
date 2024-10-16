@@ -3,6 +3,7 @@
 #particles canvas{
     z-index: -1;
     position: absolute;
+    
 }
 .carousel-container {
     max-width: 1000px;  /* Limit the maximum width */

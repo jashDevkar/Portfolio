@@ -18,6 +18,9 @@ function App() {
     if(skillRef.current){
       skillRef.current.scrollIntoView({ behavior: 'smooth' });
     }
+  }
+
+  const handleProjectScroll=()=>{
     if(projectRef.current){
       projectRef.current.scrollIntoView({ behavior: 'smooth' });
     }
@@ -26,7 +29,7 @@ function App() {
   return (
     <main className="w-full bg-transparent text-white border-b-gray-400 border-b-2">
       <ParticlesComponent  id='particles'/>
-        <Navbar handleScroll={handleScroll}/>
+        <Navbar data={[handleScroll,handleProjectScroll]}/>
 
         <Title/>
 
