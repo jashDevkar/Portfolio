@@ -7,6 +7,7 @@ import { useRef } from "react";
 import Projects from "./components/Projects";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import AboutMe from "./components/About";
 
 
 function App() {
@@ -27,11 +28,13 @@ function App() {
   }
   
   return (
-    <main className="w-full bg-transparent text-white border-b-gray-400 border-b-2">
+    <main className="w-full bg-transparent text-white border-b-gray-400 border-b-2 ">
       <ParticlesComponent  id='particles'/>
         <Navbar data={[handleScroll,handleProjectScroll]}/>
 
         <Title/>
+
+        <AboutMe/>
 
         <Skills skillRef ={skillRef}/>
 
