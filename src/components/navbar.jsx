@@ -15,7 +15,7 @@ function Navbar({data}) {
 
   return (
     <nav className="flex md:justify-around justify-between px-8 w-full h-[10vh] border-b-gray-500 border-b-2 pt-3 pb-2 items-center   shadow-md bg-[#161512]">
-      <h1 className="font-Pacifico text-[32px] bg-gradient-to-r  from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text ">Jash</h1>
+      <h1 className="font-Pacifico text-[32px] bg-gradient-to-r  from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text cursor-pointer"><a>Jash</a></h1>
       <div className="md:hidden "><IoMenu size={32} onClick={toggleOpen}/></div>
         <ul className={` hidden md:static md:flex flex-row h-fit justify-evenly md:w-[40%] md:bg-transparent text-white font-semibold tracking-wide `}>
           <div className={`md:hidden ${open?'flex justify-end ':'hidden'}`} onClick={toggleOpen}><IoClose size={20}/></div>

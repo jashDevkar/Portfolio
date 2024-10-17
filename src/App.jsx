@@ -8,6 +8,8 @@ import Projects from "./components/Projects";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import AboutMe from "./components/About";
+import Connect from "./components/Connect";
+
 
 
 function App() {
@@ -46,6 +48,8 @@ function App() {
         <Skills skillRef ={skillRef}/>
 
         <Projects projectRef={projectRef}/>
+
+        <Connect/>
 
 
     </main>

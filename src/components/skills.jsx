@@ -16,7 +16,7 @@ const Skills = ({ skillRef }) => {
   const myCards = [
     {
       title: "React js",
-      imagePath: "Reactjs.png",
+      imagePath: "react-native.webp",
       url: "https://react.dev/learn",
     },
     {
@@ -55,12 +55,14 @@ const Skills = ({ skillRef }) => {
                   <a href={item.url}>Learn topic</a>
                 </button>
               </div>
+              <div className=" h-[80%] bg-gray-700 rounded-lg flex items-center justify-center ">
               <img
                 src={item.imagePath}
-                className="md:w-full w-[210px] h-[160px] md:h-[80%]  rounded-lg"
+                className="md:w-32  md:h-32 h-28 w-28 rounded-full bg-cover bg-center"
               />
+              </div>
               <div className="flex justify-between mt-3 items-center px-2">
-                <h1 className="font-bold font-Roboto group-hover:text-[12px] md:group-hover:text-[16px]  ">
+                <h1 className=" font-Roboto group-hover:text-[12px] md:group-hover:text-[16px]  ">
                   {item.title}
                 </h1>
               </div>

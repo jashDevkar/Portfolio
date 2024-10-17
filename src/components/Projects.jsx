@@ -10,7 +10,7 @@ function Projects({projectRef}) {
         slidesToScroll:1,
         infinite : true,
         speed:500,
-        autoplay:true,
+        autoplay:false,
         autoplaySpeed : 4000,
         cssEase:"linear",
         pauseOnHover : true,
@@ -37,11 +37,11 @@ function Projects({projectRef}) {
     }
 
     const myCards=[
-        {title:'React js',imagePath:'Reactjs.png',url:'https://react.dev/learn'},
-        {title:'React Native',imagePath:'Reactjs.png',url:'https://reactnative.dev/docs/environment-setup'},
-        {title:'Django',imagePath:'python.jpg',url:'https://docs.djangoproject.com/en/5.1/'},
-        {title:'Flutter',imagePath:'flutter.png',url:'https://flutter.dev/learn'},
-        {title:'Node js',imagePath:'Nodejs.png',url:'https://nodejs.org/en'}
+        {title:'Notes Sphere',imagePath:'book.jpg',url:'https://react.dev/learn'},
+        {title:'React Native',imagePath:'',url:'https://reactnative.dev/docs/environment-setup'},
+        {title:'Django',imagePath:'',url:'https://docs.djangoproject.com/en/5.1/'},
+        {title:'Flutter',imagePath:'',url:'https://flutter.dev/learn'},
+        {title:'Node js',imagePath:'',url:'https://nodejs.org/en'}
     ]
 
   return (
@@ -57,22 +57,26 @@ function Projects({projectRef}) {
                 myCards.map((item)=>(
                     <div
                     key={item.id}
-                    className="md:w-[200px] w-[170px] md:h-[240px] h-[200px] bg-[#2C2C2C] rounded-lg cursor-pointer   transition-shadow relative shadow-sm group"
+                    className="md:w-[200px] w-[170px] md:h-[280px] h-[250px] bg-[#2C2C2C] rounded-lg cursor-pointer   transition-shadow relative shadow-sm group "
                   >
-                    <div className=" absolute h-full w-full flex justify-center items-center bg-black/35 -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-700">
+                    {/* <div className=" absolute h-full w-full flex justify-center items-center bg-black/35 -bottom-10 group-hover:bottom-0 opacity-0 group-hover:opacity-100 ease-in-out transition-all duration-700">
                       <button className="p-1 hidden group-hover:block rounded-lg  text-white text-[12px] bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 ">
                         <a href={item.url}>Learn topic</a>
                       </button>
+                    </div> */}
+
+                    <div className="relative md:h-[55%] h-[50%] bg-gray-700 rounded-lg flex items-center justify-center ">
+                      <img src={item.imagePath} className="h-28 w-28 rounded-full"/>
                     </div>
-                    <img
-                      src={item.imagePath}
-                      className="md:w-full w-[210px] h-[160px] md:h-[80%]  rounded-lg"
-                    />
-                    <div className="flex justify-between mt-3 items-center px-2">
-                      <h1 className="font-bold font-Roboto group-hover:text-[12px] md:group-hover:text-[16px]  ">
-                        {item.title}
-                      </h1>
+
+                    <h1 className="text-center font-Roboto mt-2">{item.title}</h1>
+                    <section className="ml-2 text-[12px] mt-2 text-center"><p>Android/ios application</p></section>
+                    
+                    <div className="flex justify-evenly mt-3 text-[12px]">
+                      <button className="border-2 border-gray-500 rounded-lg p-1">Show more</button>
+                      <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500  p-1 rounded-lg">Source code</button>
                     </div>
+                    
                   </div>
                 ))
             }
