@@ -1,4 +1,5 @@
 import Slider from "react-slick";
+import { myProjects } from "../Data/Data";
 
 function Projects({projectRef}) {
 
@@ -36,13 +37,7 @@ function Projects({projectRef}) {
         
     }
 
-    const myCards=[
-        {title:'Notes Sphere',imagePath:'book.jpg',url:'https://react.dev/learn'},
-        {title:'React Native',imagePath:'',url:'https://reactnative.dev/docs/environment-setup'},
-        {title:'Django',imagePath:'',url:'https://docs.djangoproject.com/en/5.1/'},
-        {title:'Flutter',imagePath:'',url:'https://flutter.dev/learn'},
-        {title:'Node js',imagePath:'',url:'https://nodejs.org/en'}
-    ]
+    
 
   return (
     
@@ -54,7 +49,7 @@ function Projects({projectRef}) {
         <Slider {...settings}>
 
         {
-                myCards.map((item)=>(
+                myProjects.map((item)=>(
                     <div
                     key={item.id}
                     className="md:w-[200px] w-[170px] md:h-[280px] h-[250px] bg-[#2C2C2C] rounded-lg cursor-pointer   transition-shadow relative shadow-sm group "
@@ -70,11 +65,11 @@ function Projects({projectRef}) {
                     </div>
 
                     <h1 className="text-center font-Roboto mt-2">{item.title}</h1>
-                    <section className="ml-2 text-[12px] mt-2 text-center"><p>Android/ios application</p></section>
+                    <section className="ml-2 text-[12px] mt-2 text-center"><p>{item.des}</p></section>
                     
                     <div className="flex justify-evenly mt-3 text-[12px]">
                       <button className="border-2 border-gray-500 rounded-lg p-1">Show more</button>
-                      <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500  p-1 rounded-lg">Source code</button>
+                      <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500  p-1 rounded-lg"><a href={item.url}>Source code</a></button>
                     </div>
                     
                   </div>

@@ -1,4 +1,5 @@
 import { Tilt } from "react-tilt";
+import { mySkills } from "../Data/Data";
 
 const Skills = ({ skillRef }) => {
   const defaultOptions = {
@@ -13,29 +14,7 @@ const Skills = ({ skillRef }) => {
     easing: "cubic-bezier(.03,.98,.52,.99)", // Easing on enter/exit.
   };
 
-  const myCards = [
-    {
-      title: "React js",
-      imagePath: "react-native.webp",
-      url: "https://react.dev/learn",
-    },
-    {
-      title: "React Native",
-      imagePath: "Reactjs.png",
-      url: "https://reactnative.dev/docs/environment-setup",
-    },
-    {
-      title: "Django",
-      imagePath: "python.jpg",
-      url: "https://docs.djangoproject.com/en/5.1/",
-    },
-    {
-      title: "Flutter",
-      imagePath: "flutter.png",
-      url: "https://flutter.dev/learn",
-    },
-    { title: "Node js", imagePath: "Nodejs.png", url: "https://nodejs.org/en" },
-  ];
+  
 
   return (
     <section ref={skillRef} className="border-b-2 border-gray-500 pb-7">
@@ -44,7 +23,7 @@ const Skills = ({ skillRef }) => {
       </header>
 
       <div className="flex flex-wrap md:gap-10 mb-2 justify-center items-center md:px-7 gap-5">
-        {myCards.map((item, index) => (
+        {mySkills.map((item, index) => (
           <Tilt options={defaultOptions} key={index}>
             <div
               key={index}
