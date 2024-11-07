@@ -17,30 +17,30 @@ const mySkills = [
     
     {
       title: "React Native",
-      imagePath: 'src/assets/images/react.jpg',
+      imagePath: '/images/react.jpg',
       url: "https://reactnative.dev/docs/environment-setup",
     },
     {
       title: "Django",
-      imagePath: "src/assets/images/python.jpg",
+      imagePath: "images/python.jpg",
       url: "https://docs.djangoproject.com/en/5.1/",
     },
     {
       title: "Flutter",
-      imagePath: "src/assets/images/flutter.png",
+      imagePath: "images/flutter.png",
       url: "https://flutter.dev/learn",
     },
     { title: "Javascript",
-       imagePath: "src/assets/images/js.jpg",
+       imagePath: "images/js.jpg",
         url: "https://nodejs.org/en" },
     {
       title: "Java",
-      imagePath: "src/assets/images/java.jpg",
+      imagePath: "images/java.jpg",
       url: "https://reactnative.dev/docs/environment-setup",
     },
     {
       title: "C++",
-      imagePath: "src/assets/images/c++.jpg",
+      imagePath: "images/c++.jpg",
       url: "https://reactnative.dev/docs/environment-setup",
     },
   ];
