@@ -1,6 +1,3 @@
-import { data } from "autoprefixer";
-
-
 
 function Description({ name ,fun}) {
 
