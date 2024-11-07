@@ -32,7 +32,7 @@ const Skills = ({ skillRef }) => {
                 className="w-full h-full absolute bg-black/80  left-[-50px] opacity-0 group-hover:opacity-100  group-hover:left-0 top-0 duration-[1.5s] transition-all flex justify-center items-center 
                rounded-sm"
               >
-                <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 p-1 rounded-sm transition-all duration-500 ">
+                <button className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 p-1 rounded-sm transition-all duration-500 md:text-[20px] text-[10px]">
                   <a href={item.url}>Learn more</a>
                 </button>
               </div>
