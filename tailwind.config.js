@@ -10,6 +10,7 @@ export default {
         Pacifico:["Pacifico", "cursive"],
         Roboto:["Roboto Serif", "serif"],
         Poppins:["Poppins", "sans-serif"],
+        Lora:["Roboto Serif", "serif"]
       }
     },
   },
