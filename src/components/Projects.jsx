@@ -77,9 +77,9 @@ function Projects({ projectRef }) {
 
       <div className=" mb-2 px-10  w-full ">
         <Slider {...settings}>
-          {myProjects.map((item) => (
+          {myProjects.map((item,index) => (
             <div
-              key={item.id}
+              key={index}
               className="w-[170px] h-[250px]  bg-[#2C2C2C]/50 backdrop-blur-sm rounded-sm cursor-pointer  relative shadow-sm group flex flex-col text-center  "
             >
               <div className="flex flex-col justify-center w-full items-center  py-6 bg-gradient-to-tr from-black/80 via-slate-900/80 to-gray-800/80 backdrop-blur-md rounded-sm ">
