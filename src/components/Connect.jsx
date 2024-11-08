@@ -4,12 +4,23 @@ import { MdEmail } from "react-icons/md";
 import Heading from "../Reusable/Heading";
 import { useState } from "react";
 import emailjs from'@emailjs/browser'
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Connect({ connectRef }) {
   const data = {
     decorated: "Connect",
     text: "Me",
   };
+
+  const successToast = () => toast.success("Email sent succesfully!",{
+    position:"top-right",
+    theme:'dark'
+  });
+
+  const failureToast=()=>toast.error("Something went wrong",{
+    position:'top-right'
+  })
 
   const [name,setName]=useState("");
   const [email,setEmail]=useState("");
@@ -34,13 +45,14 @@ function Connect({ connectRef }) {
 
     emailjs.send(serviceId,templateId,templateParams,publickey)
     .then((response)=>{
-      console.log('Email sent successfully',response),
+      successToast();
       setName('');
       setEmail('');
-      setMessage('')
+      setMessage('');
+
     })
     .catch((error)=>{
-      console.error('error sending email',error)
+      failureToast();
     })
 
   
@@ -49,6 +61,7 @@ function Connect({ connectRef }) {
   return (
     <section className="" ref={connectRef}>
       <Heading data={data} />
+      <ToastContainer/>
 
       <main className="flex flex-row justify-evenly md:px-20 md:py-10 px-9 pb-7">
         <div className=" hidden flex-col md:w-[45%] px-3 text-justify gap-2  md:flex">
