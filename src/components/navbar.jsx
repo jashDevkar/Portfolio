@@ -27,7 +27,7 @@ function Navbar({data}) {
           <li><button onClick={data[1]} className="nav-link relative">Project</button></li>
           <li><button onClick={data[3]} className="nav-link relative">Connect me</button></li>
         </ul>
-        <ul className={`md:hidden w-[40%] mr-5 px-4 text-white  ${open?"absolute right-0 mr-2 top-2":"hidden"} py-3 mt-2 rounded bg-gradient-to-r from-black via-slate-900 to-gray-800`}>
+        <ul className={`md:hidden w-[40%] mr-5 pl-4 pr-2 text-white  ${open?"absolute right-0 mr-2 top-2":"hidden"} pt-2 pb-4 mt-2 rounded bg-gradient-to-br from-[#0e0c0b] via-[#221f1d] to-[#2d2a28] backdrop-blur-xl`}>
           <li className="flex w-[100%] justify-end"><IoClose size={24} onClick={toggleOpen}/></li>
           <li className="" onClick={data[0]}>Skills</li>
           <li className="mt-2" onClick={data[1]}>Projects</li>
