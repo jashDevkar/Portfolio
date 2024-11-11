@@ -13,12 +13,11 @@ function AboutMe({ aboutRef }) {
       <Heading data={data}/>
       <div className="flex flex-col">
       
-          <p className="text-justify  backdrop-blur-[4px] text-pretty tracking-wide font-Lora">
+          <p className="text-justify  backdrop-blur-[4px] text-pretty  font-Lora">
            I am Jash, a computer engineer student. I am a keen learner , i built my foundation in coding by learning programing languages such as C , Java , C++ and JavaScript.
            I am proficient in frameworks such as React , Django ,React-Native and flutter. I have a very good foundation and knowledge in cross-platform or native app development.
-           I built my very first app called "NotesSphere" using React-Native which helps students to view notes. I have a also integrated cloud computing serviice such as Firebase i my app.
-           In this portfolio you can see all my skills and projects using different frameworks. Feel free to connect with me if interested!
-
+           I built my very first app called "NotesSphere" using React-Native which helps students to view notes. I have a also integrated cloud computing service such as Firebase i my app.
+           In this portfolio you can see all my skills and projects which i have built using different frameworks. Feel free to connect with me if interested!
           </p>   
       </div>
     </section>

@@ -15,8 +15,8 @@ function Description({ name ,fun}) {
             All this information are stored in Firestore and new users are created and deleted realtime.`},
         {name:'Calculator',text:`Made a simple calculator using react js with working functionality and a good gui`},
         {name:'Portfolio',text:`this website which you are seeing is made using vite+react a frontend library made by facebook.
-            No third party library has been used to make this website. some parts of the gui are inspired by a youtube channels video while rest 
-            rest of the gui is mmade by me.`}
+            No third party library has been used to make this website. some parts of the gui are inspired by a youtube video while rest 
+            of the gui is made by me.`}
     ]
 
 
