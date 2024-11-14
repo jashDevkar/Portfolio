@@ -13,17 +13,11 @@ function Navbar({data}) {
    setOpen(!open)
   }
 
-  const openTransition=()=>{
-    if(open){
-      return  'right-2'
-    }
-    else{
-      return 'right-0'
-    }
-  }
+  
 
   return (
-    <nav className={`flex md:justify-around justify-between px-11 w-full  border-b-gray-500 border-b-2 py-3  items-center shadow-md bg-[#161512]/50  backdrop-blur-sm relative `}>
+   
+    <nav className={`flex md:justify-around  justify-between px-11 w-full  border-b-gray-500 border-b-2 py-3  items-center shadow-md bg-[#161512]/50  backdrop-blur-sm relative ${open?'':'overflow-x-clip '}`}>
       <h1 className="font-Pacifico text-[32px]  bg-gradient-to-r  from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text cursor-pointer"><a>Jash</a></h1>
       {
         open?
@@ -36,7 +30,8 @@ function Navbar({data}) {
           <li><button onClick={data[1]} className="nav-link relative">Project</button></li>
           <li><button onClick={data[3]} className="nav-link relative">Connect me</button></li>
         </ul>
-        <ul className={`top-2 pl-4 pb-4 pr-2 pt-2 w-[50%] md:hidden ${open?'right-2 absolute ':'right-[-200px] absolute '} rounded bg-gradient-to-br from-[#0e0c0b] via-[#221f1d] to-[#2d2a28] backdrop-blur-xl transition-all ease-in-out duration-1000`}>
+
+        <ul className={`top-2 pl-4 pb-4 pr-2 pt-2 w-[50%] md:hidden ${open?'right-2 absolute ':'right-[-200px] absolute'} rounded bg-gradient-to-br from-[#0e0c0b] via-[#221f1d] to-[#2d2a28] backdrop-blur-xl transition-all ease-in-out duration-1000`}>
           <li className="flex w-[100%] justify-end"><IoClose size={24} onClick={toggleOpen}/></li>
           <li className="" onClick={data[0]}>Skills</li>
           <li className="mt-2" onClick={data[1]}>Projects</li>
@@ -47,6 +42,7 @@ function Navbar({data}) {
       </button>
 
     </nav>
+   
   );
 }
 
