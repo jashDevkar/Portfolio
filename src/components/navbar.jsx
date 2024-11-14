@@ -36,7 +36,7 @@ function Navbar({data}) {
           <li><button onClick={data[1]} className="nav-link relative">Project</button></li>
           <li><button onClick={data[3]} className="nav-link relative">Connect me</button></li>
         </ul>
-        <ul className={`top-2 pl-4 pb-4 pr-2 pt-2 w-[50%] md:hidden ${open?'right-2 absolute ':'right-[-2l00px] absolute '} rounded bg-gradient-to-br from-[#0e0c0b] via-[#221f1d] to-[#2d2a28] backdrop-blur-xl transition-all ease-in-out duration-1000`}>
+        <ul className={`top-2 pl-4 pb-4 pr-2 pt-2 w-[50%] md:hidden ${open?'right-2 absolute ':'right-[-200px] absolute '} rounded bg-gradient-to-br from-[#0e0c0b] via-[#221f1d] to-[#2d2a28] backdrop-blur-xl transition-all ease-in-out duration-1000`}>
           <li className="flex w-[100%] justify-end"><IoClose size={24} onClick={toggleOpen}/></li>
           <li className="" onClick={data[0]}>Skills</li>
           <li className="mt-2" onClick={data[1]}>Projects</li>
