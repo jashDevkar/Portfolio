@@ -11,7 +11,7 @@ function Title({data}) {
   return (
     <section className=" flex justify-center items-center h-[90vh] flex-col text-center ">
           <img src="images/dp.jpg" className="w-[200px] h-[200px] md:w-[250px] md:h-[250px] rounded-full  object-cover"/>  
-          <h1 className="font-Roboto font-semibold text-[20px] md:text-[28px] w-[40%]
+          <h1 className="font-Roboto font-semibold text-[18px] md:text-[28px] w-[40%]
            text-center mt-[10px]"><span className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text">I'm Jash Devkar </span> {text}<Cursor cursorColor="pink"/> </h1>
         
           <div className="md:w-[40%] flex justify-evenly mt-[20px] gap-3 text-[12px]  ">
