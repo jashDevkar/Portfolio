@@ -3,9 +3,10 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import Heading from "../Reusable/Heading";
 import { useState } from "react";
-import emailjs from'@emailjs/browser'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
 
 function Connect({ connectRef }) {
   const data = {
@@ -30,30 +31,13 @@ function Connect({ connectRef }) {
   const handleFormSubmit=(e)=>{
     e.preventDefault();
 
+    try{
+        console.log('hello')
+    }
 
-    const serviceId = "service_dmd4eub";
-    const templateId = "template_aivdaxe"
-    const publickey = "DygOPgpsWtRiAjjb-"
-
-
-    const templateParams={
-      from_name:name,
-      from_email:email,
-      to_name:'jash',
-      message : message
-    };
-
-    emailjs.send(serviceId,templateId,templateParams,publickey)
-    .then((response)=>{
-      successToast();
-      setName('');
-      setEmail('');
-      setMessage('');
-
-    })
-    .catch((error)=>{
+    catch(error){
       failureToast();
-    })
+    }
 
   
   }
@@ -63,8 +47,8 @@ function Connect({ connectRef }) {
       <Heading data={data} />
       <ToastContainer/>
 
-      <main className="flex flex-row justify-evenly md:px-20 md:py-10 px-9 pb-7">
-        <div className=" hidden flex-col md:w-[45%] px-3 text-justify gap-2  md:flex">
+      <main className="flex md:flex-row flex-wrap justify-evenly md:px-20 md:py-10 px-9 pb-7">
+        <div className=" flex-col md:w-[45%]  text-justify gap-2 flex md:px-3 mb-10">
           <h1 className="bg-gradient-to-r from-purple-500  to-orange-500 text-transparent bg-clip-text font-semibold text-4xl font-Poppins">
             Let's talk
           </h1>
@@ -86,6 +70,10 @@ function Connect({ connectRef }) {
           <div className="flex gap-5 mt-4 items-center">
             <FaLocationDot size={25} />
             <label>Mumbai, Maharashtra</label>
+          </div>
+          <div className="flex gap-5 mt-4 items-center">
+            
+            <label>Connect me form section is under development, but still you can send me email</label>
           </div>
         </div>
 
