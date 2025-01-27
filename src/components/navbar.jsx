@@ -11,12 +11,12 @@ function Navbar({ data }) {
 
   return (
     <nav
-      className={`flex md:justify-around  justify-between px-11 w-full  border-b-gray-500 border-b-2 py-3  items-center shadow-md bg-[#161512]/50  backdrop-blur-sm relative ${
+      className={`flex md:justify-around  justify-between px-11 w-full  border-b-gray-500 border-b-2 py-3  items-center shadow-md bg-[#020617]/50  backdrop-blur-sm relative ${
         open ? "" : "overflow-x-clip "
       }`}
     >
       <h1 className="font-Pacifico text-[32px]  bg-gradient-to-r  from-purple-500 via-pink-500 to-orange-500 text-transparent bg-clip-text cursor-pointer">
-        <a>Jash</a>
+        <a href="#">Jash</a>
       </h1>
       {open ? null : (
         <div className="md:hidden ">

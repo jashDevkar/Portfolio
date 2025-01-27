@@ -1,10 +1,11 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdError } from "react-icons/md";
 import Heading from "../Reusable/Heading";
 import { useState } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { IoIosWarning } from "react-icons/io";
 
 
 
@@ -32,7 +33,10 @@ function Connect({ connectRef }) {
     e.preventDefault();
 
     try{
-        console.log('hello')
+        console.log('hello');
+        setName("")
+        setMessage("")
+        setEmail("")
     }
 
     catch(error){
@@ -68,13 +72,14 @@ function Connect({ connectRef }) {
           </div>
 
           <div className="flex gap-5 mt-4 items-center">
-            <FaLocationDot size={25} />
+          <FaLocationDot size={25} />
             <label>Mumbai, Maharashtra</label>
           </div>
-          <div className="flex gap-5 mt-4 items-center">
-            
-            <label>Connect me form section is under development, but still you can send me email</label>
+          <div className="flex gap-5 mt-4 items-start justify-center">
+          <IoIosWarning size={30} />
+            <label>form section is under development, but you can still connect with me using email mentioned above</label>
           </div>
+
         </div>
 
         <form className="flex flex-col md:w-[40%] gap-6 w-full " onSubmit={handleFormSubmit}>

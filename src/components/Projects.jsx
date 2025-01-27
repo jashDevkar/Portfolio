@@ -6,6 +6,7 @@ import Heading from "../Reusable/Heading";
 import { Link } from "react-router-dom";
 import Description from "../Description/Description";
 import { useState } from "react";
+import { orangeGradient } from "../Data/Data";
 
 function Projects({ projectRef }) {
   const settings = {
@@ -82,11 +83,11 @@ function Projects({ projectRef }) {
               key={index}
               className="w-[170px] h-[250px]  bg-[#2C2C2C]/50 backdrop-blur-sm rounded-sm cursor-pointer  relative shadow-sm group flex flex-col text-center  "
             >
-              <div className="flex flex-col justify-center w-full items-center  py-6 bg-gradient-to-tr from-black/80 via-slate-900/80 to-gray-800/80 backdrop-blur-md rounded-sm ">
+              <div className={"flex flex-col justify-center w-full items-center  py-6  backdrop-blur-md rounded-sm bg-gradient-to-br from-purple-900 to-slate-900"}>
                 {item.comp}
               </div>
               <div className="flex flex-col gap-3 pt-2 font-Poppins">
-                <h1 className="text-center font-semibold font-Poppins">
+                <h1 className="text-center font-semibold font-Poppins text-xl">
                   {item.title}
                 </h1>
 
@@ -95,7 +96,7 @@ function Projects({ projectRef }) {
                     show more
                   </button>
                   <button
-                    className=" bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 rounded-e-full rounded-s-full pt-2 pb-2 pl-3 pr-3  "
+                    className={'  rounded-e-full rounded-s-full pt-2 pb-2 pl-3 pr-3 ' + orangeGradient}
                   >
                     <a href={item.url} className="flex justify-center items-center gap-2">Source code <FaArrowRight /></a>
                   </button>
