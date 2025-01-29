@@ -53,10 +53,9 @@ function Navbar({ data }) {
         My Apps
       </button>
 
-      <div
-        className={`top-2 gap-3 flex flex-col pl-4 pb-4 pr-2 pt-2 w-[50%] h-fit z-20 md:hidden ${
-          open ? "right-2 absolute" : "right-[-200px] absolute"
-        } rounded bg-gradient-to-br from-[#0e0c0b] via-[#221f1d]/95 to-[#2d2a28]/90 backdrop-blur-xl transition-all ease-in-out duration-1000`}
+      {open? 
+      <div className={`top-2 gap-3 flex flex-col pl-4 pb-4 pr-2 pt-2 w-[50%] h-fit z-20 md:hidden  right-2 absolute 
+         rounded bg-gradient-to-br from-purple-900/80 to-slate-900/80 backdrop-blur-xl cursor-pointer `}
       >
         <span className="flex w-[100%] justify-end h-fit">
           <IoClose size={24} onClick={toggleOpen} />
@@ -83,7 +82,7 @@ function Navbar({ data }) {
           </li>
         </ul>
 
-      </div>
+      </div>:null}
     </nav>
   );
 }
